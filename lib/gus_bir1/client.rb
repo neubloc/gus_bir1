@@ -57,8 +57,8 @@ module GusBir1
       )
     end
 
-    def find_and_get_full_data(hash)
-      r = find_by(hash)
+    def find_and_get_full_data(**args)
+      r = find_by(**args)
       r.map { |h| get_full_data_from_response(h) }
     end
 
