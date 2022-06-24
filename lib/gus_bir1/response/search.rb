@@ -19,6 +19,7 @@ module GusBir1
       def parse_dane(hash)
         search_result                = OpenStruct.new
         search_result.name           = hash['Nazwa']
+        search_result.nip            = hash['Nip']
         search_result.regon          = hash['Regon']
         search_result.province       = hash['Wojewodztwo']
         search_result.district       = hash['Powiat']
